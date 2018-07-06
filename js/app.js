@@ -42,9 +42,6 @@ $("#calculate").click(()=>{
     let sum=0,denom=0;
     credits.forEach((e,i)=>{sum+=e*pts[grade[i]];denom+=e;});
     console.log(credits,grade,Number((sum/denom).toFixed(2)));
-    $("#gpaCalculator").append("<div class=\"row justify-content-center mt-3\">\n" +
-        "        <div class=\"col col-lg-8 col-md-6 col-sm-12 alert\" role=\"alert\" id=\"gpaResult\" >\n" +
-        "        </div>\n" +
-        "    </div>");
+    $("#gpaResult").addClass('d-block');
     $("#gpaResult").html(`<b>Your GPA is ${Number((sum/denom).toFixed(2))}</b>`);
 });
