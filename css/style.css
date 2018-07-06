@@ -1,0 +1,30 @@
+.input-group-text{
+    background-color: #6f42c1;
+    color: white;
+    border:none
+}
+
+.form-control{
+    border: none;
+}
+
+option{
+    color:#6f42c1;
+    background-color: #343a40;
+}
+
+select option:hover{
+    background-color: #6f42c1;
+    color: white;
+}
+.alert{
+    background-color: #414a50;
+    color: white;
+    text-align: center;
+}
+
+.btn{
+    background-color: #6f42c1;
+    color: white;
+    width: 8rem;
+}
