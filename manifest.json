@@ -1,6 +1,6 @@
 {
   "name": "GPA Calculator",
-  "short_name": "GPA Calculator",
+  "short_name": "GPA Calc",
   "icons": [{
     "src": "images/logo-128x128.png",
     "sizes": "128x128",
@@ -21,9 +21,13 @@
     "src": "images/logo-256x256.png",
     "sizes": "256x256",
     "type": "image/png"
+  }, {
+    "src": "images/logo-512x512.png",
+    "sizes": "512x512",
+    "type": "image/png"
   }],
-  "start_url": "/index.html",
+  "start_url": "./GPACalculator/",
   "display": "standalone",
-  "background_color": "#3E4EB8",
-  "theme_color": "#2F3BA2"
+  "background_color": "#642AC1",
+  "theme_color": "#642AC1"
 }
