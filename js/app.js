@@ -27,21 +27,36 @@ $("#add").click(() => {
 });
 
 $("#calculate").click(()=>{
-    let credits=[], grade=[];
+    let credits=[], grade=[],er=0;
     for( let i=0;i<$("#creditList")[0].children.length;i++){
-        console.log($("#creditList")[0].children[i]);
         let m=$("#creditList")[0].children[i];
         if((m.children[1].value!=='Credits' && m.children[2].value==='Grade') || m.children[1].value==='Credits' && m.children[2].value!=='Grade'){
             alert('Make sure the necessary fields are selected');
+            return;
         }
         else if(m.children[1].value!=='Credits' && m.children[2].value!=='Grade'){
             credits.push(parseInt(m.children[1].value,10));
             grade.push(m.children[2].value);
         }
     }
-    let sum=0,denom=0;
-    credits.forEach((e,i)=>{sum+=e*pts[grade[i]];denom+=e;});
-    console.log(credits,grade,Number((sum/denom).toFixed(2)));
-    $("#gpaResult").addClass('d-block');
-    $("#gpaResult").html(`<b>Your GPA is ${Number((sum/denom).toFixed(2))}</b>`);
+    if(credits.length) {
+        let sum = 0, denom = 0;
+        credits.forEach((e, i) => {
+            sum += e * pts[grade[i]];
+            denom += e;
+        });
+        $("#gpaResult").addClass('d-block');
+        $("#gpaResult").html(`<b>Your GPA is ${Number((sum / denom).toFixed(2))}</b>`);
+    }
 });
+(function() {
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('./service-worker.js')
+            .then(function (registration) {
+                console.log('Registration successful, scope is:', registration.scope);
+            })
+            .catch(function (error) {
+                console.log('Service worker registration failed, error:', error);
+            });
+    }
+})();

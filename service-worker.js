@@ -1,7 +1,19 @@
 var dataCacheName = 'GPACalculator';
 var cacheName = 'GPACalculator';
-var filesToCache = ["/GPACalculator/index.html", "/GPACalculator/js/app.js", "/GPACalculator/js/bootstrap.min.js", "/GPACalculator/js/jquery-3.2.1.min.js", "/GPACalculator/css/bootstrap.min.css", "/GPACalculator/css/style.css",
-"/GPACalculator/images/logo-128x128.png","/GPACalculator/images/logo-144x144.png","/GPACalculator/images/logo-152x152.png","/GPACalculator/images/logo-192x192.png","/GPACalculator/images/logo-256x256.png","/GPACalculator/manifest.json"];
+var filesToCache = [
+    "./",
+    "./index.html",
+    "./js/app.js",
+    "./js/bootstrap.min.js",
+    "./js/jquery-3.2.1.min.js",
+    "./css/bootstrap.min.css",
+    "./css/style.css",
+    "./images/logo-128x128.png",
+    "./images/logo-144x144.png",
+    "./images/logo-152x152.png",
+    "./images/logo-192x192.png",
+    "./images/logo-256x256.png",
+    "./manifest.json"];
 
 self.addEventListener('install', function(event) {
     event.waitUntil(
